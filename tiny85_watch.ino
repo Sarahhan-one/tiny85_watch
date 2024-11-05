@@ -33,9 +33,14 @@ void DisplayNextRow() {
   if (row > 1) row++;    // Skip PB2
   byte bits = 0;
   for (int i=0; i<5; i++) {
-    if (Hours == Pins[row][i]) bits |= 1<<i;
-    // show minutes LED during blink cycle
-    if (MinuteLEDState && ((Minutes/5) == Pins[row][i])) bits |= 1<<i;
+    if (Hours == (Minutes/5)) {
+      if (MinuteLEDState && ((Minutes/5) == Pins[row][i])) bits |= 1<<i;
+    } else {
+      if (Hours == Pins[row][i]) bits |= 1<<i;
+      // show minutes LED during blink cycle
+      if (MinuteLEDState && ((Minutes/5) == Pins[row][i])) bits |= 1<<i;
+    }
+
   }
   DDRB = 1<<row | bits;
   PORTB = bits | 0x04;         // Keep PB2 high
