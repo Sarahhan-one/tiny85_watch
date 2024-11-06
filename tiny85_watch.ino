@@ -33,11 +33,10 @@ void DisplayNextRow() {
   if (row > 1) row++;    // Skip PB2
   byte bits = 0;
   for (int i=0; i<5; i++) {
-    if (Hours == (Minutes/5)) {
-      if (MinuteLEDState && ((Minutes/5) == Pins[row][i])) bits |= 1<<i;
-    } else {
+    if (Hours == (Minutes/5)) { //when hours and minutes LEDs overlap
+      if (MinuteLEDState && ((Minutes/5) == Pins[row][i])) bits |= 1<<i; //show only the minutes
+    } else { 
       if (Hours == Pins[row][i]) bits |= 1<<i;
-      // show minutes LED during blink cycle
       if (MinuteLEDState && ((Minutes/5) == Pins[row][i])) bits |= 1<<i;
     }
 
