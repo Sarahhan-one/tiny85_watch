@@ -4,7 +4,7 @@ This project builds upon [David's Tiny Time Watch](http://www.technoblogy.com/sh
 
 ![watch_3](https://github.com/user-attachments/assets/d81b954f-a138-4d0a-a2ed-3a7b6c50ebba)
 
-**[Check out the video in action]([https://youtu.be/ctR4pCAqMrQ?si=eUrizgF7dfWRZ8VW](https://youtu.be/fZJ_hKkSAIo))**
+**[Check out the video in action!](https://youtu.be/fZJ_hKkSAIo)**
 
 ## Overview
 The Tiny85 Watch operates with a single button and offers a unique way of displaying time:
