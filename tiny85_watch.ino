@@ -20,11 +20,11 @@ volatile boolean MinuteLEDState = false;  // Current state of minute LED
 volatile byte BlinkPhase = 0;            // To control blink timing
 
 // Pin assignments
-int Pins[5][5] = {{-1, 11, -1,  1,  6 },
-                  {10, -1, -1,  9,  8 },
+int Pins[5][5] = {{-1, 10, -1,  2,  0 },
+                  {11, -1, -1,  3,  7 },
                   {-1, -1, -1, -1, -1 },
-                  { 2,  3, -1, -1,  4 },
-                  { 0,  7, -1,  5, -1 } };
+                  { 1,  9, -1, -1,  5 },
+                  { 6,  8, -1,  4, -1 } };
 
 // Display multiplexer
 void DisplayNextRow() {
